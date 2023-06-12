@@ -17,9 +17,13 @@ echo "installing homebrew please enter your password when asked"
 echo "install github desktop"
 brew install --cask github
 
-#install Python3
-echo "installing python3"
-brew install python@3.9
+#install Python3 commented out because Jupyter Lab installs python as a dependency
+#echo "installing python3"
+#brew install python@3.9
+
+#install jupyter-lab
+echo "installing Jupyter-lab"
+brew install jupyterlab
 
 #symlink python to python3 location
 echo "symlink python to python3"
@@ -45,10 +49,6 @@ brew install --cask rstudio
 # chown and chmod man pages
 sudo chown -R $(whoami) /usr/local/share/man/man5
 chmod u+w /usr/local/share/man/man5
-
-#install jupyter-lab
-echo "installing Jupyter-lab"
-brew install jupyterlab
 
 #install mysqlworkbench
 echo "install mysqlworkbench"
@@ -89,7 +89,8 @@ brew install --cask tableau-public
 
 #install speedtest
 echo "installing speedtest"
-brew install speedtest-cli
+brew tap teamookla/speedtest
+brew install speedtest
 
 #install G*Power
 echo "installing G*Power"
@@ -103,21 +104,21 @@ brew install wget
 echo "installing Julia"
 brew install julia
 
-#install node
-echo "installing node"
-brew install node
+#install node commented out since Jupyter Lab installs node as a dependency
+#echo "installing node"
+#brew install node
 
 #install AWS Command Line Interface
 echo "installing awscli"
 brew install awscli
 
 #install openjdk@11 as it's a neo4j dependency
-echo "installing openjdk@11 for neo4j"
-brew install openjdk@11
+#echo "installing openjdk@11 for neo4j"
+#brew install openjdk@11
 
 #install neo4j
-echo "installing neo4j"
-brew install --cask neo4j
+#echo "installing neo4j"
+#brew install --cask neo4j
 
 #install ds-students
 pip3 install ds-students
